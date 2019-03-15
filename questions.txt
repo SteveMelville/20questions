@@ -1,0 +1,14 @@
+Is it alive?
+false
+Does it meow?
+false
+cat
+true
+dog
+true
+is it cold?
+false
+fridge
+true
+rock
+true

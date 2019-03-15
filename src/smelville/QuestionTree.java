@@ -12,16 +12,9 @@ import java.util.*;
  * @author toavi
  */
 public class QuestionTree {
-    QuestionTree(){
-        root_ = new TreeNode();
-        root_.question_ = "Is it alive?";
-        root_.left_ = new TreeNode();
-        root_.right_ = new TreeNode();
-        root_.left_.object_ = "cat";
-        root_.right_.object_ = "rock";
-    }
     
-    public void askQuestions(){
+    public TreeNode askQuestions(TreeNode tree){
+        root_ = tree;
         Boolean answerToContinue = true;
         
         while(answerToContinue){
@@ -94,6 +87,7 @@ public class QuestionTree {
             response = input.nextLine();
             answerToContinue = getAnswer(response);
         }
+        return root_;
     }
     
     private boolean getAnswer(String answer){
@@ -117,15 +111,5 @@ public class QuestionTree {
     Scanner input = new Scanner(System.in);
     TreeNode root_;
     
-    class TreeNode{
-        TreeNode(){
-            left_ =  null;
-            right_ = null;
-            question_ = null;
-            object_ = null;
-        }
-        
-        protected TreeNode left_, right_;
-        String question_, object_;
-    }
+
 }
